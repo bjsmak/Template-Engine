@@ -12,11 +12,7 @@ const render = require("./lib/htmlRenderer");
 const { listenerCount } = require("process");
 
 const team = [];
-<<<<<<< HEAD
 console.log('Welcome to the Team Creator! Please see details below.');
-=======
-console.log('test');
->>>>>>> 58b1c8ec39445f20e852a20c250ff531ece1ffdd
 function createTeam(){
     //Inquirer function to prompt user for role
     inquirer.prompt([
@@ -40,11 +36,7 @@ function createTeam(){
             break;
             case 'Intern': addIntern();
             break;
-<<<<<<< HEAD
             case 'None': createHTML();
-=======
-            case 'None': render(team);
->>>>>>> 58b1c8ec39445f20e852a20c250ff531ece1ffdd
             break;
         }
     })
