@@ -8,6 +8,10 @@
 }
 
 .employee-card {
-    background-color: 84a98c;
+    background-color: #84a98c;
     margin-top: 5px;
+}
+
+.list-group-item {
+    background-color: #cad2c5;
 }
