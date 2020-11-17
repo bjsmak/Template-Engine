@@ -1,0 +1,13 @@
+.body {
+    background-color: #cad2c5;
+}
+
+.team-all, .team-heading {
+    background-color: #2f3e46;
+    color: #ffffff;
+}
+
+.employee-card {
+    background-color: 84a98c;
+    margin-top: 5px;
+}
