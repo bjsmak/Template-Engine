@@ -11,6 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const { listenerCount } = require("process");
 
+//Empty array for team members
 const team = [];
 console.log('Welcome to the Team Creator! Please see details below.');
 function createTeam(){
@@ -30,7 +31,7 @@ function createTeam(){
     ]).then(input => {
         //Switch case for the roles
         switch(input.roleSelect){
-            case 'Manager': addManager(); 
+            case 'Manager': addManager();
             break;
             case 'Engineer': addEngineer();
             break;
@@ -70,7 +71,7 @@ function createTeam(){
             //Log information into created classes and push newly created manager into team array
             const manager = new Manager(input.managerName, input.managerEmail, input.managerID, input.managerOffice);
             team.push(manager);
-
+            //Re-run function
             createTeam();
         })
     }
@@ -102,7 +103,7 @@ function createTeam(){
             //Log information into Intern class and push to array
             const intern = new Intern(input.internName, input.internEmail, input.internID, input.internSchool);
             team.push(intern);
-
+            //Re-run function
             createTeam();
         })
     }
@@ -135,7 +136,7 @@ function createTeam(){
             //Log information into Engineer class and push to array
             const engineer = new Engineer(input.engineerName, input.engineerEmail, input.engineerID, input.engineerGitHub);
             team.push(engineer);
-
+            //Re-run function
             createTeam();
         })
     }
@@ -143,7 +144,7 @@ function createTeam(){
 
 //Export
 module.exports = team;
-
+//Write file to HTML in the output folder
 function createHTML(){
     fs.writeFileSync(outputPath, render(team), "utf-8");
     console.log("Your file has been created.");
